@@ -1,78 +1,43 @@
 
 import React, { useState } from 'react';
-import { Layout, theme } from 'antd';
+import { Layout, Typography, Card } from 'antd';
 import UploadZip from './components/UploadZip';
 import Canvas from './components/Canvas';
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
+
+const { Title } = Typography;
 
 const App = () => {
   const [imageSrc, setImageSrc] = useState(null);
 
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
   return (
-    <Layout>
-      <Layout>
-        <Header
-          style={{
-            padding: 0,
-            background: colorBgContainer,
-          }}
-        />
-          <h1 style={{ color: 'black', textAlign: 'center' }}>Image Labeling App</h1>
+    <Layout style={{ minHeight: '100vh', background: '#f5f6fa' }}>
+      <Header style={{ background: '#20232a', padding: '0 20px' }}>
+        <Title style={{ color: '#61dafb', lineHeight: '64px', margin: 0 }} level={3}>
+          Image Annotation App
+        </Title>
+      </Header>
 
-        <Layout      
-          style={{
-            flexDirection: 'row',
-            margin: '24px 16px 0',
-          }}>
-          <Content
-          style={{
-            margin: '24px 16px 0',
-          }}
-        >
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
+      <Content style={{ padding: '20px' }}>
+        <div className="card-container">
+          <Card 
+            className="small-card" 
+            title={<span style={{ color: '#20232a' }}>Upload Files</span>}
           >
             <UploadZip onUpload={setImageSrc} type="primary">UploadZip</UploadZip>
-          </div>
-          </Content>
 
-          <Content
-          style={{
-            margin: '24px 16px 0',
-          }}
-        >
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
+          </Card>
+          <Card 
+            className="big-card" 
+            title={<span style={{ color: '#20232a' }}>Annotator</span>}
           >
             {imageSrc && <Canvas imageSrc={imageSrc} />}helloo
-          </div>
+          </Card>
+
+        </div>
         </Content>
 
-        </Layout>
-
-
-        <Footer
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
-        </Footer>
-      </Layout>
     </Layout>
   );
 };

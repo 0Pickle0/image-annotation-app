@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  height: 100vh;
+}
+
+.ant-layout-content {
+  background: #f5f6fa;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.small-card {
+  flex: 1;
+  background: #fff;
+  border-color: #ddd;
+  min-width: 200px;
+}
+
+.big-card {
+  flex: 3;
+  background: #fff;
+  border-color: #ddd;
+  min-width: 300px;
+}
+
