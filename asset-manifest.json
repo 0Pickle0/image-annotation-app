@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/image-annotation-app/static/css/main.e3619497.css",
+    "main.js": "/image-annotation-app/static/js/main.472c6aaa.js",
+    "static/js/453.e6c68f13.chunk.js": "/image-annotation-app/static/js/453.e6c68f13.chunk.js",
+    "index.html": "/image-annotation-app/index.html",
+    "main.e3619497.css.map": "/image-annotation-app/static/css/main.e3619497.css.map",
+    "main.472c6aaa.js.map": "/image-annotation-app/static/js/main.472c6aaa.js.map",
+    "453.e6c68f13.chunk.js.map": "/image-annotation-app/static/js/453.e6c68f13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3619497.css",
+    "static/js/main.472c6aaa.js"
+  ]
+}
