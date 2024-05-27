@@ -2,7 +2,7 @@
   "name": "image-annotation-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://{0Pickle0}.github.io/{image-annotation-app}",
+  "homepage":"https://0Pickle0.github.io/image-annotation-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
